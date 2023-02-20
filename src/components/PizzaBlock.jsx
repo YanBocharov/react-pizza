@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
 function PizzaBlock({ title, price, imageUrl, sizes, types }) {
   const [activeType, setActiveType] = React.useState(0);
   const [activeSize, setActiveSize] = React.useState(0);
 
-  const typeNames = ["тонкое", "традиционное"];
+  const typeNames = ['тонкое', 'традиционное'];
 
   return (
     <div className="pizza-block">
@@ -16,7 +16,7 @@ function PizzaBlock({ title, price, imageUrl, sizes, types }) {
             <li
               key={typeId}
               onClick={() => setActiveType(typeId)}
-              className={activeType === typeId ? "active" : ""}
+              className={activeType === typeId ? 'active' : ''}
             >
               {typeNames[typeId]}
             </li>
@@ -27,7 +27,7 @@ function PizzaBlock({ title, price, imageUrl, sizes, types }) {
             <li
               key={size}
               onClick={() => setActiveSize(i)}
-              className={activeSize === i ? "active" : ""}
+              className={activeSize === i ? 'active' : ''}
             >
               {size} см.
             </li>
